@@ -1,0 +1,15 @@
+<div class="play-zone">
+  <div class="board">
+    <div *ngFor="let row of board; let i = index" class="board-row">
+      <div
+        *ngFor="let cell of row; let j = index"
+        class="board-cell"
+        (click)="makeMove(i, j)"
+      >
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+
+  <button routerLink="score">View Scores</button>
+</div>
